@@ -1,0 +1,307 @@
+*{margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/inter-v20-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('./fonts/merriweather-sans-v28-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* background-color */
+
+body{font-family: 'Inter', sans-serif;
+  background-color: #fffbe6;
+}
+
+.backgroundnav{background-color: #8cf501;
+  top:0;
+  z-index: 1030; }
+
+
+/* Targeting the Nav Links */
+.backgroundnav .nav-link {
+    color: #462b0d !important; /* Forces your cream color */
+    transition: color 0.3s ease;
+}
+.backgroundnav .nav-link {
+  position: relative;       /* needed for ::before positioning */
+  padding: 0.5em 1em;      /* adjust spacing */
+  transition: color 0.5s ease;
+}
+
+.backgroundnav .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 80%;
+  background-color: green; /* your green */
+  border-radius:  0px 10px;       /* rounded corners */
+  z-index: -1;               /* behind the text */
+  opacity: 0;                /* hidden by default */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.backgroundnav .nav-link:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1); /* slightly enlarge on hover */
+}
+
+/* The Hover Effect */
+.backgroundnav .nav-link:hover {
+    color: #e6f7ce !important; /* Or #ffca28 for a warmer gold */
+}
+
+/* Making the SVG icons inherit the color change */
+.backgroundnav .nav-link svg {
+    fill: currentColor;
+}
+.jumbotron{
+  position: relative;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.hero-video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.hero-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:white;
+  text-align:center;
+}
+
+.jumbotron::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+/* This targets the checkbox when it is checked */
+.form-check-input:checked {
+    background-color: #0e3c1a; /* Use your preferred green here */
+    border-color: #0e3c1a;
+    filter: hue-rotate(100deg) brightness(0.9); /* Adjusts the internal white tick if needed */
+}
+
+.light-green-border{
+    border-color:#b0df6d !important;
+}
+
+h3,h4{font-family: 'Merriweather', sans-serif;
+   color: #0d3125;}
+
+/* Product carousel images */
+.carousel-item img {
+  height: 350px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 1rem;
+  background-color:#f3ecbf;
+}
+
+.carousel-item img {
+  transition: transform 0.4s ease;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Slightly darker green for footer (uses higher specificity to override Bootstrap utilities) */
+.bg-success-darker {
+  background-color: #62961d;
+  color: #ffffff;
+}
+.bg-success-darker a {
+  color: #ffffff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  height: 100%;
+}
+
+.grid-item {
+  overflow: hidden;      /* crop overflow to maintain look */
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    
+  display: block;       
+}
+
+.product-card {
+  position: relative;
+  display: block;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.card-img-overlay {
+  pointer-events: none;
+}
+
+.product-name-overlay {
+  background: rgba(3, 51, 3, 0.5); /* semi-transparent black */
+  color: #ffffff;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+.contact-section{
+    background-color: #f3ecbf;  
+    padding: 60px 0;
+}
+
+.btn-send{
+    background-color: #6b4f2a;   /* brown */
+    color: white;
+    border: none;
+    padding: 8px 25px;
+}
+
+.btn-send:hover{
+    background-color: #a67c52;   /* light brown when hovering */
+    color: white;
+}
+
+.btn-send:active{
+    background-color: #a67c52;   /* light brown when clicking */
+    color: white;
+}
+
+.btn-send{
+    transition: background-color 0.3s ease;
+}
+/* Target all icons and text inside contact-info */
+.contact-info i {
+  font-size: 1.1rem;   /* makes the icons bigger */
+  margin-right: 0.5rem; /* space between icon and number */
+}
+
+.contact-info p {
+  font-size: 1.2rem;  /* makes the numbers bigger */
+  margin-bottom: 0.5rem; /* optional spacing */
+}
+
+#about{width: 100vw;
+   position: relative;
+    left: 50%;
+     right: 50%;
+      margin-left: -50vw;
+       margin-right: -50vw;
+    }
+
+
+footer .bi {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+footer a:hover .bi {
+  transform: scale(1.3);
+  color: #25e53f; /* dark green */
+}
+
+footer p b{
+display:inline-block;
+width:100px;
+}
+
+footer .align-with-map {
+  margin-top: 56px; /* adjust if needed */
+}
+/* Control Y-axis position of footer logo */
+footer .footer-logo {
+  margin-top: 50px; /* Adjust this value to move logo further down */
+}
+footer .list-unstyled li a {
+  font-size: 17px;
+}
+
+footer .list-unstyled li a:hover {
+  color: #25e53f !important;
+}
+/* Smooth scroll for anchor links */
+html { scroll-behavior: smooth; }
+
+
+@media (max-width: 992px) {
+  #featuredcarousel img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  #featuredcarousel img {
+    height: 150px;
+  }
+}
+
+/* Mobile menu */
+@media (max-width: 992px) {
+  .backgroundnav ul.nav {
+    display: none;           /* hide by default */
+    flex-direction: column;  /* stack links vertically */
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .backgroundnav ul.nav.show {
+    display: flex;           /* show when toggled */
+  }
+
+  .backgroundnav ul.nav li {
+    width: 100%;             /* full width links */
+    text-align: center;
+  }
+
+  .backgroundnav ul.nav li a {
+    padding: 0.8em 0;        /* vertical padding */
+  }
+
+  /* Hamburger button spacing */
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+  }
+}

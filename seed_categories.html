@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seeds Category</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background:#f7eadb;
+      overflow-x: hidden;
+    }
+
+    @font-face {
+  font-family: 'Merriweather';
+  src: url('./fonts/merriweather-sans-v28-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+  h1{font-family: 'Merriweather', sans-serif;}
+
+    /* Sidebar */
+    #sidebar {
+      position: fixed;     /* YES */
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #198754;
+  padding: 1rem;
+  transition: left 0.3s ease;
+  z-index: 1050;
+    }
+
+    #sidebar {
+  left: -250px;
+}
+    #sidebar.active {
+      left: 0;
+    }
+
+    #sidebar .nav-link {
+      color: #fff;
+    }
+
+    #sidebar .nav-link.active {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    /* Main content */
+    #main-content {
+      transition: margin-left 0.3s ease;
+      margin-left: 0;
+    }
+
+    #main-content.shifted {
+      margin-left: 250px;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Card gradient border */
+.custom-card {
+  border: 3px solid transparent; /* base border */
+  border-radius: 0.5rem;         /* make the corners rounded */
+  background-image: linear-gradient(#fff, #fff), linear-gradient(45deg, #198754, #8fd19e);
+  background-origin: border-box;
+  background-clip: content-box, border-box; 
+  transition: transform 0.2s ease;
+}
+
+.custom-card:hover {
+  transform: scale(1.03);
+}
+
+/* Uniform images */
+.card-img-top {
+  border-radius: 0.5rem; /* match the card */
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+<nav class="mt-3 mx-3" style="--bs-breadcrumb-divider: '››';" aria-label="breadcrumb">
+   <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" class="text-success">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" class="text-success">Products</a></li>
+    <li class="breadcrumb-item active text-success" aria-current="page">Seeds</li>
+  </ol>
+</nav>
+
+<!-- Burger Button -->
+<div id="title-content">
+<div class="d-flex align-items-center position-relative mb-5">
+  <button class="btn btn-success mt-3 mx-2" id="menu-toggle">
+    🍃Categories
+  </button>
+
+  <h1 class="position-absolute start-50 translate-middle-x text-dark m-0">
+    Seeds
+  </h1>
+</div>
+</div>
+
+
+<div id="sidebar">
+  <button class="btn-close btn-close-white close-btn" id="close-btn"></button>
+  <h5 class="text-white mt-4">All Products</h5>
+  <ul class="nav nav-pills flex-column mt-3">
+    <li class="nav-item"><a class="nav-link active" href="#">Seeds</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Fertilisers & Plant Nutrition</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Crop Protection Products</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Tools & Machinery</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Horticulture & Garden Care</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Organic & Biological Solutions</a></li>
+
+  </ul>
+</div>
+
+<div id="main-content">
+  <div class="container text-center">
+    <div class="row row-cols-2 row-cols-lg-4 g-4">
+
+      <!-- Product 1 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/beetroot.jpg" class="card-img-top" alt="Beetroot Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Beetroot Seeds</h6>
+            <p class="text-success fw-bold">Rs250</p>
+           <button class="btn btn-sm btn-success w-75 mb-2"
+           onclick="addToCart('Beetroot Seeds', 250, 1)">
+           Add to cart
+          </button>
+        <button class="btn btn-sm btn-success w-75"
+         onclick="addToCart('Beetroot Seeds', 250, 10)">
+          Buy In Bulk
+          </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/cabbage.jpg" class="card-img-top" alt="Cabbage Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Cabbage Seeds</h6>
+            <p class="text-success fw-bold">Rs200</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/carrot seeds.jpg" class="card-img-top" alt="Carrot Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Carrot Seeds</h6>
+            <p class="text-success fw-bold">Rs250</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/cauliflower.jpg" class="card-img-top" alt="Cauliflower Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Cauliflower Seeds</h6>
+            <p class="text-success fw-bold">Rs300</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/chili pepper.jpg" class="card-img-top" alt="Chili Pepper Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Chili Pepper Seeds</h6>
+            <p class="text-success fw-bold">Rs250</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/lettuce.jpg" class="card-img-top" alt="Lettuce Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Lettuce Seeds</h6>
+            <p class="text-success fw-bold">Rs150</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/pumpkin.png" class="card-img-top" alt="Pumpkin Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Pumpkin Seeds</h6>
+            <p class="text-success fw-bold">RS200</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/tomato seeds.jpg" class="card-img-top" alt="Tomato Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Tomato Seeds</h6>
+            <p class="text-success fw-bold">Rs300</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/watermelon.jpg" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Watermelon Seeds</h6>
+            <p class="text-success fw-bold">Rs200</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+           <!-- Product 10 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/maize.png" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Maize Seeds</h6>
+            <p class="text-success fw-bold">Rs100</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+                <!-- Product 11 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/Pepper_Seeds.jpg" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Bell Pepper Seeds</h6>
+            <p class="text-success fw-bold">Rs150</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+                 <!-- Product 12 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/radish.webp" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Radish Seeds</h6>
+            <p class="text-success fw-bold">Rs100</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      
+                 <!-- Product 13 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/parsnip.webp" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Parsnip Seeds</h6>
+            <p class="text-success fw-bold">Rs150</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      
+      
+                 <!-- Product 14 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/celery.webp" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Celery Seeds</h6>
+            <p class="text-success fw-bold">Rs200</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      
+      
+                 <!-- Product 15 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/Bush_Bean.webp" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Bush Bean Seeds</h6>
+            <p class="text-success fw-bold">Rs150</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      
+      
+                 <!-- Product 16 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/okra.webp" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Okra Seeds</h6>
+            <p class="text-success fw-bold">Rs100</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+      
+      
+                 <!-- Product 17 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/bittergourd.jpg" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Bittergourd Seeds</h6>
+            <p class="text-success fw-bold">Rs100</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+        
+                 <!-- Product 18 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/brocoli.jpg" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Broccoli Seeds</h6>
+            <p class="text-success fw-bold">Rs100</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+             
+                 <!-- Product 19 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/bok_choy.jpg" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Bok Choy Seeds</h6>
+            <p class="text-success fw-bold">Rs100</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+                
+                 <!-- Product 20 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm custom-card">
+          <img src="./images/seeds/eggplant.webp" class="card-img-top" alt="Watermelon Seeds">
+          <div class="card-body text-center">
+            <h6 class="card-title text-dark">Eggplant Seeds</h6>
+            <p class="text-success fw-bold">Rs100</p>
+            <button class="btn btn-sm btn-success w-75 mb-2">Add to cart</button>
+            <button class="btn btn-sm btn-success w-75">Buy In Bulk</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- JavaScript -->
+<script>
+const toggleBtn = document.getElementById("menu-toggle");
+const closeBtn = document.getElementById("close-btn");
+const sidebar = document.getElementById("sidebar");
+const mainContent = document.getElementById("main-content"); // products container
+
+toggleBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("active");       // show sidebar
+  mainContent.classList.toggle("shifted");  // push content
+});
+
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.remove("active");       // hide sidebar
+  mainContent.classList.remove("shifted");  // pull content back
+});
+
+function addToCart(name, price, quantity) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let existing = cart.find(item => item.name === name);
+
+    if (existing) {
+        existing.quantity += quantity;   // add 1 or 10
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            quantity: quantity
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Go to cart page
+    window.location.href = "checkout.html";
+}
+</script>
+
+</body>
+</html>

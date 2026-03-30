@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#fffbe6;
+}
+
+/* Product Container */
+
+.product-container{
+    max-width:1000px;
+    margin:40px auto;
+    background:#fff6ca;
+    padding:30px;
+    border-radius:10px;
+    display:flex;
+    gap:40px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-image img{
+    width:350px;
+    border-radius:10px;
+}
+
+/* Product Info */
+
+.product-info h1{
+    margin-top:0;
+}
+
+.product-info p{
+    line-height:1.6;
+}
+
+/* Sections */
+
+.section{
+    margin-top:20px;
+}
+
+.warning{
+    background:#fff3cd;
+    padding:10px;
+    border-left:5px solid orange;
+}
+
+/* Buttons */
+
+.buttons{
+    margin-top:25px;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+    margin-right:10px;
+}
+
+.products-btn{
+    background:#0f5403; /* same color as contact button */
+    color:white;
+    padding:12px 20px;
+    border-radius:5px;
+    text-decoration:none;
+    display:inline-block;
+    margin-left: 15px;
+}
+
+.products-btn:hover{
+    opacity:0.7;
+}
+
+.contact{
+    background:#c68b1f;
+    color:white;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.contact-btn{
+    background:#9f720a;
+    color:white;
+    padding:12px 20px;
+    border-radius:5px;
+    text-decoration:none;
+    display:inline-block;
+}
+
+.contact-btn:hover{
+    opacity: 0.7;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="product-container">
+
+<div class="product-image">
+<img src="./images/seeds_camera_pic/Tomato_Seeds.png" alt="Product Image">
+</div>
+
+
+<div class="product-info">
+
+    <br><br>
+<h1>Tomato Seeds</h1>
+
+<p style="text-align:justify;">
+Premium tomato seeds yield juicy, flavorful fruits bursting with vitamins and rich taste. These vigorous plants produce abundant clusters of round or plum-shaped tomatoes, perfect for fresh salads, sauces, cooking, or home canning in sunny Mauritian gardens.
+</p>
+
+<div class="section">
+<h3>Mode of Use</h3>
+<p>
+Sow tomato seeds 0.5–1 cm deep in seed trays or directly in fertile, well-drained soil. Keep soil moist and warm (20–30°C) for germination in 5–10 days. Transplant seedlings outdoors after 4–6 weeks, spacing 45–60 cm apart in rows, stake or cage plants for support, and provide full sun with regular watering and feeding for healthy growth and heavy yields.
+</p>
+</div>
+
+<div class="section warning">
+<h3>Warning Label</h3>
+<p>
+Keep out of reach of children.
+Store in a cool dry place. Do not ingest.
+</p>
+</div>
+
+<div class="buttons">
+
+<a href="test.html#contact" class="contact-btn">Contact for Further Information</a>
+<a href="./products.html" class="products-btn">Back To Products</a>
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* Add to Wishlist */
+
+
+/* Redirect to Contact Section */
+
+function goToContact(){
+document.getElementById("contact").scrollIntoView({
+behavior: "smooth"
+});
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#fffbe6;
+}
+
+/* Product Container */
+
+.product-container{
+    max-width:1000px;
+    margin:40px auto;
+    background:#fff6ca;
+    padding:30px;
+    border-radius:10px;
+    display:flex;
+    gap:40px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-image img{
+    width:350px;
+    border-radius:10px;
+}
+
+/* Product Info */
+
+.product-info h1{
+    margin-top:0;
+}
+
+.product-info p{
+    line-height:1.6;
+}
+
+/* Sections */
+
+.section{
+    margin-top:20px;
+}
+
+.warning{
+    background:#fff3cd;
+    padding:10px;
+    border-left:5px solid orange;
+}
+
+/* Buttons */
+
+.buttons{
+    margin-top:25px;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+    margin-right:10px;
+}
+
+.products-btn{
+    background:#0f5403; /* same color as contact button */
+    color:white;
+    padding:12px 20px;
+    border-radius:5px;
+    text-decoration:none;
+    display:inline-block;
+    margin-left: 15px;
+}
+
+.products-btn:hover{
+    opacity:0.7;
+}
+
+.contact{
+    background:#c68b1f;
+    color:white;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.contact-btn{
+    background:#9f720a;
+    color:white;
+    padding:12px 20px;
+    border-radius:5px;
+    text-decoration:none;
+    display:inline-block;
+}
+
+.contact-btn:hover{
+    opacity: 0.7;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="product-container">
+
+<div class="product-image">
+<img src="./images/Agrochemicals_camera_pic/Vigor+nk.png" alt="Product Image">
+</div>
+
+
+<div class="product-info">
+
+    <br><br>
+<h1>Vigor NK</h1>
+
+<p style="text-align:justify;">
+Vigor NK is a liquid nitrogen-potassium fertilizer that enhances flowering, fruiting, and crop quality. Promotes strong stems, better fruit set, and improved taste/color — ideal for mid-to-late season application on vegetables, fruits, and field crops in Mauritian agriculture.
+</p>
+
+<div class="section">
+<h3>Mode of Use</h3>
+<p>
+Dilute 5–10 ml per liter of water for foliar spray or 1–2 L per hectare for soil application. Apply during flowering and fruit development stages. Spray evenly on leaves or drench soil, preferably early morning or evening. Use every 10–15 days or as crop needs dictate. Shake bottle before use.
+</p>
+</div>
+
+<div class="section warning">
+<h3>Warning Label</h3>
+<p>
+Keep out of reach of children. Store in a cool, dry place. Avoid eye/skin contact — wear gloves when handling. Do not ingest. Rinse with water if contact occurs. Seek medical advice if irritation persists.
+</p>
+</div>
+
+<div class="buttons">
+
+<a href="test.html#contact" class="contact-btn">Contact for Further Information</a>
+<a href="./products.html" class="products-btn">Back To Products</a>
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* Add to Wishlist */
+
+
+/* Redirect to Contact Section */
+
+function goToContact(){
+document.getElementById("contact").scrollIntoView({
+behavior: "smooth"
+});
+}
+
+</script>
+
+
+</body>
+</html>

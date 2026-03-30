@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+*{margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/inter-v20-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('./fonts/merriweather-sans-v28-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* background-color */
+
+body{font-family: 'Inter', sans-serif;
+  background-color: #fffbe6;
+}
+
+.backgroundnav{background-color: #8cf501;
+  top:0;
+  z-index: 1030; }
+
+
+/* Targeting the Nav Links */
+.backgroundnav .nav-link {
+    color: #462b0d !important; /* Forces your cream color */
+    transition: color 0.3s ease;
+}
+.backgroundnav .nav-link {
+  position: relative;       /* needed for ::before positioning */
+  padding: 0.5em 1em;      /* adjust spacing */
+  transition: color 0.5s ease;
+}
+
+.backgroundnav .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 80%;
+  background-color: green; /* your green */
+  border-radius:  0px 10px;       /* rounded corners */
+  z-index: -1;               /* behind the text */
+  opacity: 0;                /* hidden by default */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.backgroundnav .nav-link:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1); /* slightly enlarge on hover */
+}
+
+/* The Hover Effect */
+.backgroundnav .nav-link:hover {
+    color: #e6f7ce !important; /* Or #ffca28 for a warmer gold */
+}
+
+/* Making the SVG icons inherit the color change */
+.backgroundnav .nav-link svg {
+    fill: currentColor;
+}
+.justify {
+  text-align: justify;
+}
+
+h5 {
+  text-align: center;
+  margin-top: 25px;
+  font-weight: 600;
+}
+
+</style>
+</head>
+<body>
+<div class="px-3 py-2 backgroundnav border-bottom position-sticky top-0"> 
+  <div class="container-fluid">
+    <div class="d-flex flex-wrap align-items-center justify-content-between">
+    <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-auto text-white text-decoration-none">
+    <img src="./images/Logo/Agro_logo4.png" class="ms-4" width="170" height="55" alt="Agroculture Logo">
+         </a>
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small"> 
+            <li> <a href="./index.html" class="nav-link text-white"> <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true"><use xlink:href="#home"></use></svg>
+Home
+</a> </li>
+ <li> <a href="./products.html" class="nav-link text-white"> <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true"><use xlink:href="#grid"></use></svg>
+Products</a> </li> 
+ <li> <a href="./videos.html" class="nav-link text-white"> <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true"><use xlink:href="#people-circle"></use></svg>
+Videos
+</a> </li>
+ <li> <a href="./about.html" class="nav-link text-white"> <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true"><use xlink:href="#people-circle"></use></svg>
+About
+</a> </li> 
+<li> <a href="./test.html#contact" class="nav-link text-white"> <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true"><use xlink:href="#people-circle"></use></svg>
+Contact
+</a> </li> 
+</ul>
+
+ </div>
+ </div>
+ </div>   
+ <h2 class="text-center mt-4">About Us</h2>
+
+<div class="container-fluid mt-5 px-4">
+
+  <!-- Image (centered) -->
+  <div class="text-center mb-4">
+    <img src="./images/Aboutuspic/storefront_pic1.png"
+         class="img-fluid rounded"
+         width="500"
+         height="850"
+         alt="About us image">
+  </div>
+
+    <!-- Text -->
+     <div class="mx-auto px-3" style="max-width: 1000px;">
+      <h5>Who We Are</h5>
+      <p class="justify">
+      Agroculture Island Ltd was established in 2014 and is strategically located in Bois Cheri. We operate in the agro-chemical sector, supplying a wide range of agricultural products and solutions to support the farming community across Mauritius.
+      </p>
+      <h5>Our Vision & Mission</h5>
+      <p class="justify">
+   Our vision is to become a market leader in the coming years by continuously delivering excellence.
+Our mission is to serve the planters community by providing high-quality products and reliable services that support sustainable agricultural growth.
+     </p>
+     <h5>What We Offer</h5>
+      <p class="justify">
+     We provide a comprehensive range of agricultural products including herbicides, fungicides, insecticides, soluble and mineral fertilisers, seeds, bio-pesticides, and irrigation tools. Our equipment range includes manual, motorised, and electric sprayers, as well as hydroponic systems.
+
+Our target market includes sugarcane planters, vegetable growers, farmers, golf courses, hotels, and hydroponic cultivators.
+</p>
+     <h5>Our Values</h5>
+     <p class="justify">We are guided by strong corporate values including integrity, honesty, commitment, and discipline in everything we do.</p>
+    
+    </div>
+
+  </div>
+</div>
+<br>
+</body>
+</html>

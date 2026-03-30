@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#fffbe6;
+}
+
+/* Product Container */
+
+.product-container{
+    max-width:1000px;
+    margin:40px auto;
+    background:#fff6ca;
+    padding:30px;
+    border-radius:10px;
+    display:flex;
+    gap:40px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-image img{
+    width:350px;
+    border-radius:10px;
+}
+
+/* Product Info */
+
+.product-info h1{
+    margin-top:0;
+}
+
+.product-info p{
+    line-height:1.6;
+}
+
+/* Sections */
+
+.section{
+    margin-top:20px;
+}
+
+.warning{
+    background:#fff3cd;
+    padding:10px;
+    border-left:5px solid orange;
+}
+
+/* Buttons */
+
+.buttons{
+    margin-top:25px;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+    margin-right:10px;
+}
+
+.products-btn{
+    background:#0f5403; /* same color as contact button */
+    color:white;
+    padding:12px 20px;
+    border-radius:5px;
+    text-decoration:none;
+    display:inline-block;
+    margin-left: 15px;
+}
+
+.products-btn:hover{
+    opacity:0.7;
+}
+
+.contact{
+    background:#c68b1f;
+    color:white;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.contact-btn{
+    background:#9f720a;
+    color:white;
+    padding:12px 20px;
+    border-radius:5px;
+    text-decoration:none;
+    display:inline-block;
+}
+
+.contact-btn:hover{
+    opacity: 0.7;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="product-container">
+
+<div class="product-image">
+<img src="./images/Agrochemicals_camera_pic/Corothrin.png" alt="Product Image">
+</div>
+
+
+<div class="product-info">
+
+    <br><br>
+<h1>Cororothrin 2.5 EC Insecticide</h1>
+
+<p style="text-align:justify;">
+Cororothrin 2.5 EC is a powerful pyrethroid insecticide with deltamethrin 25 g/L for fast knockdown of chewing and sucking pests. Effective against aphids, caterpillars, beetles, and flies on vegetables, fruits, sugarcane, and field crops, providing long-lasting protection in Mauritian agriculture.
+</p>
+
+<div class="section">
+<h3>Mode of Use</h3>
+<p>
+Dilute according to crop label rates (usually 1–2 ml/L water). Fill sprayer tank with water first, add measured Cororothrin, agitate well, and apply as a foliar spray during early pest infestation. Use fine mist nozzle for even coverage, avoid spraying during flowering or windy conditions, and reapply every 7–14 days as needed. Wear full PPE and follow all safety precautions.
+</p>
+</div>
+
+<div class="section warning">
+<h3>Warning Label</h3>
+<p>
+POISON – WHO Class II. Keep out of reach of children. Toxic if swallowed, inhaled, or absorbed through skin. Wear gloves, mask, goggles, and protective clothing. Do not eat, drink, or smoke while handling. Wash thoroughly after use. In case of poisoning, seek immediate medical help and show this label.
+</p>
+</div>
+
+<div class="buttons">
+
+<a href="test.html#contact" class="contact-btn">Contact for Further Information</a>
+<a href="./products.html" class="products-btn">Back To Products</a>
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* Add to Wishlist */
+
+
+/* Redirect to Contact Section */
+
+function goToContact(){
+document.getElementById("contact").scrollIntoView({
+behavior: "smooth"
+});
+}
+
+</script>
+
+
+</body>
+</html>
